@@ -1,4 +1,29 @@
 {%extends 'all-news/base.html'%}
 {%block content%}
 {{block.super}}
+
+
+<div class="container">
+    <div class="row">
+    {%for news_item in news %}
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-title">
+              <h2  class="animated fadeIn text-center"  >{{news_item.title}}</h2>
+          </div>
+          <div class="card-body">
+                <p class="muted">{{news_item.post}}</p>
+          </div>
+          <i>by~~{{news_item.editor}}</i>
+
+        </div>
+
+
+      </div>
+      {%empty%}
+      <h1 class="animated fadeIn alert alert-info">No news avaliable yet</h1>
+    </div>
+    {%endfor%}
+
+</div>
 {%endblock%}
