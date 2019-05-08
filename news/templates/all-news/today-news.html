@@ -13,12 +13,11 @@
           </div>
           <div class="card-img">
 
-            <img class="card-img-top" src="{{article_image.url}}" alt="Image">
-            <p>{{news_item.article_image.url}}</p>
-            <img src="/meda/articles/AlanWalker.png" alt="">
+            <img class="card-img-top" src="{{news_item.article_image.url}}" alt="Image">
           </div>
           <div class="card-body">
                 <p class="muted">{{news_item.post}}</p>
+                <a href="/article/{{news_item.id}}">view Full article</a>
           </div>
           <i>by~~{{news_item.editor}}</i>
 
